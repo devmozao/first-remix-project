@@ -8,7 +8,7 @@ import {
   ScrollRestoration,
   useCatch,
   Link,
-  NavLink
+  NavLink,
 } from "remix";
 import type { LinksFunction } from "remix";
 
@@ -30,9 +30,9 @@ export let links: LinksFunction = () => {
     {
       rel: "stylesheet",
       href: darkStylesUrl,
-      media: "(prefers-color-scheme: dark)"
+      media: "(prefers-color-scheme: dark)",
     },
-    { rel: "stylesheet", href: deleteMeRemixStyles }
+    { rel: "stylesheet", href: deleteMeRemixStyles },
   ];
 };
 
@@ -53,7 +53,7 @@ export default function App() {
 
 function Document({
   children,
-  title
+  title,
 }: {
   children: React.ReactNode;
   title?: string;
@@ -95,6 +95,9 @@ function Layout({ children }: React.PropsWithChildren<{}>) {
               </li>
               <li>
                 <a href="https://github.com/remix-run/remix">GitHub</a>
+              </li>
+              <li>
+                <Link to="/posts">Posts</Link>
               </li>
             </ul>
           </nav>
